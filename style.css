@@ -1,0 +1,108 @@
+body {
+  background-color: hsl(35, 60%, 96%);
+  color: hsl(33, 15%, 15%);
+  font-size: 14px;
+}
+
+aside {
+  background-color: hsl(30, 24%, 93%);
+}
+
+.card {
+  background-color: hsl(40, 60%, 98%);
+  border-color: hsl(36, 22%, 86%);
+}
+
+.btn-outline-secondary {
+  color: hsl(32, 20%, 29%);
+  border-color: hsl(36, 22%, 86%);
+}
+
+.btn-outline-secondary:hover {
+  background-color: hsl(32, 20%, 29%);
+  border-color: hsl(32, 20%, 29%);
+  color: white;
+}
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Fraunces", serif;
+}
+.host-card {
+  background-color: hsl(18, 62%, 47%);
+  color: hsl(41, 100%, 93%);
+  border: none;
+  border-radius: 20px;
+}
+
+.host-card .text-body-secondary {
+  color: hsl(41, 100%, 93%) !important;
+}
+.arrival-icon {
+  display: inline-flex;
+  background-color: hsl(15, 74%, 41%);
+}
+.wifi-icon {
+  display: inline-flex;
+  background-color: hsl(230, 49%, 56%);
+}
+.breakfast-icon {
+  display: inline-flex;
+  background-color: hsl(340, 48%, 52%);
+}
+.sidebar-menu {
+  --bs-offcanvas-width: 100%;
+  background-color: hsl(35, 60%, 96%);
+}
+
+.sidebar-menu .offcanvas-body {
+  min-height: 0;
+}
+
+.weather-card {
+  background-color: hsl(44, 84%, 75%);
+}
+
+@media (min-width: 768px) {
+  .sidebar-menu .offcanvas-body {
+    min-height: calc(100vh - 2rem);
+  }
+}
+.stay-date {
+  font-family: "Fraunces", serif;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.guest-name {
+  color: hsl(18, 62%, 47%);
+}
+@media (min-width: 992px) {
+  .booking-cards {
+    max-width: 720px;
+    margin: 40px auto;
+    align-items: stretch;
+  }
+
+  .booking-cards > section {
+    display: flex;
+  }
+
+  .booking-cards > section > .card {
+    width: 100%;
+    height: auto !important;
+  }
+
+  .booking-cards .host-card {
+    position: relative;
+    z-index: 1;
+    transform: translateX(-32px) rotate(3deg);
+  }
+}
+.booking-cards .card {
+  box-shadow: 0 12px 28px hsl(33 15% 15% / 10%);
+}

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+ <!-- Bootstrap -->
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  rel="stylesheet">
+<!-- Fonts -->
+<link
+  href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Fraunces:ital,wght@0,400;1,400&display=swap"
+  rel="stylesheet">
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Hotel booking confirmation page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+ <style>
+    .attribution { font-size: 0.6875rem; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+
+  <!-- Sidebar starts -->
+  <aside class="col-12 col-md-3 p-3">
+
+  <!-- Mobile header -->
+  <div class="d-flex d-md-none justify-content-between align-items-center">
+    <img src="./assets/images/logo.svg"
+         alt="Maison Soleil" width="120">
+
+    <button class="btn" type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#guestMenu"
+            aria-controls="guestMenu"
+            aria-label="Open menu">
+      <img src="./assets/images/icon-menu.svg"
+           alt="" width="24" tt="24">
+    </button>
+  </div>
+
+  <!-- Sidebar / mobile menu -->
+  <div class="offcanvas-md offcanvas-start sidebar-menu"
+       tabindex="-1" 
+       id="guestMenu"
+       aria-labelledby="guestMenuTitle">
+
+    <div class="offcanvas-header">
+      <h2 id="guestMenuTitle" class="mb-0">
+        <img src="./assets/images/logo.svg"
+             alt="Maison Soleil" 
+             width="120">
+      </h2>
+
+      <button type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              data-bs-target="#guestMenu"
+              aria-label="Close menu">
+     </button>
+    </div>
+
+    <div class="offcanvas-body d-flex flex-column p-3">
+
+      <img src="./assets/images/logo.svg"
+           alt="Maison Soleil" 
+           width="120"
+           class="d-none d-md-block mb-4">
+
+       <!-- Guest navigation -->
+
+      <nav aria-label="Guest navigation" class="mb-4">
+        <ul class="nav flex-column gap-2">
+
+          <li class="nav-item">
+            <a
+             href="#"
+              class="nav-link text-dark fw-bold"
+               aria-current="page">
+              <img
+               src="./assets/images/icon-bed.svg"
+               alt="" 
+               width="20"
+               class="me-2">
+              Your stay
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link text-dark">
+              <img src="./assets/images/icon-house.svg"
+                  alt=""
+                  width="20" 
+                  class="me-2">
+              The house
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link text-dark">
+              <img src="./assets/images/icon-pin.svg"
+                   alt="" 
+                   width="20" 
+                   class="me-2">
+              Around town
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link text-dark">
+              <img src="./assets/images/icon-breakfast-outline.svg"
+                   alt="" 
+                   width="20" 
+                   class="me-2">
+              Breakfast
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link text-dark">
+              <img src="./assets/images/icon-mail.svg"
+                   alt="" 
+                   width="20" 
+                   class="me-2">
+              Messages
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <!-- Local weather -->
+      <div class="weather-card rounded-4 p-3 mt-auto mb-4">
+        <p class="small text-uppercase mb-1">Today in Cassis</p>
+        <p class="fs-2 mb-1">27°</p>
+        <p class="small mb-0">Sunny · light breeze</p>
+      </div>
+
+      <div class="small">
+        <p>Est. 1987</p>
+        <p>Maison Soleil · 12 Rue des Oliviers · Cassis</p>
+        <p class="mb-0">© 2026 Maison Soleil</p>
+      </div>
+
+    </div>
+  </div>
+</aside>
+  <!-- Sidebar ends -->
+   
+  <!-- Main content starts -->
+  <main class="col-12 col-md-9 p-4">
+    <header class="d-flex flex-column flex-lg-row
+               justify-content-between align-items-lg-center gap-3 mb-4">
+
+  <div>
+    <p class="small text-uppercase mb-2">Booking · Confirmed</p>
+
+    <h1 class="mb-0">
+      Bienvenue, <em class="guest-name">Lucia.</em>
+    </h1>
+  </div>
+
+  <div class="d-flex flex-wrap gap-2">
+    <button type="button" class="btn btn-outline-secondary rounded-pill">
+      Print receipt
+    </button>
+
+    <button type="button" class="btn btn-dark rounded-pill">
+      Add to calendar
+    </button>
+  </div>
+
+</header>
+  <!-- Booking cards start -->
+   <div class="row g-4 booking-cards">
+
+  <!-- Receipt card -->
+   <section class="col-12 col-lg-6 order-2 order-lg-1">
+    <div class="card h-100">
+      <div class="card-body p-4">
+        <h2 class="h4">Receipt</h2>
+        <p class="text-body-secondary">№ MS-2026<br>0421-AH</p>
+        <h3 class="h5 mb-3">Your stay</h3>
+    <div class="row mb-4">
+        <div class="col-6">
+          <p class="mb-1">Check in</p>
+          <p class="stay-date mb-1">25 Apr</p>
+          <p class="small">Saturday · 15:00</p>
+        </div>
+      <div class="col-6">
+          <p class="mb-1">Check out</p>
+          <p class=  "stay-date mb-1">29 Apr</p>
+          <p class="small">Wednesday · 11:00</p>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-between gap-3 mb-2">
+        <span>Room · La Garrigue · 4 nights</span>
+        <span class="text-nowrap">€ 620.00</span>
+      </div>
+      <div class="d-flex justify-content-between gap-3 mb-2">
+        <span>Breakfast · 2 guests</span>
+        <span class="text-nowrap">€ 96.00</span>
+      </div>
+
+      <div class="d-flex justify-content-between gap-3 mb-3">
+        <span>Tourist tax</span>
+        <span class="text-nowrap">€ 14.40</span>
+      </div>
+
+      <div class="d-flex justify-content-between gap-3 fw-bold border-top pt-3">
+        <span>Total paid</span>
+        <span class="text-nowrap">€ 730.40</span>
+      </div>
+
+      <p class="small text-body-secondary mt-3 mb-0">
+        Paid · Wise · GBP
+      </p>
+ 
+  <!-- Barcode image -->
+   <div class="text-end mt-3">
+  <img
+    src="./assets/images/icon-barcode.svg"
+    alt=""
+    width="100"
+    height="32">
+   </div>
+   </div> 
+    </div>
+</section>
+  <!-- Note from host card -->
+   <section class="col-12 col-lg-6 order-1 order-lg-2">
+    <div class="card h-100 host-card">
+      <div class="card-body p-4 d-flex flex-column">
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+        <p class="small text-uppercase mb-4">Welcome card</p>
+        <img
+           src="./assets/images/illustration-sun.svg"
+           alt=""
+           width="48"
+           height="48">
+
+        </div>
+
+        <h2 class="fst-italic mb-4">
+          <span class="fs-5"> A note from your host</span><br>
+          <span class="fs-1">Margaux</span>
+        </h2>
+
+        <p>
+          We're so glad you're coming. The shutters will be open, the lemonade cold, and the cat - Poivre - pretending not to notice you.
+        </p>
+
+        <p class="small text-uppercase mt-auto mb-1 pt-4">
+        Room
+        </p>
+        
+        <h3 class="h5 mb-0">La Garrigue</h3>
+      </div>
+    </div>
+   </section>
+  
+
+  <!-- Booking cards end --> 
+   </div>
+
+  <!-- Guest info row starts -->
+  <div class="row g-4 mt-4">
+  
+    <!-- Arrival -->
+<section class="col-12 col-lg-4">
+  <div class="card h-100">
+    <div class="card-body">
+
+      <div class="d-flex justify-content-between align-items-center">
+        <h2 class="h5 d-flex align-items-center gap-2 mb-0">
+          <span class="arrival-icon p-2 rounded">
+            <img
+              src="./assets/images/icon-key.svg"
+              alt=""
+              width="20"
+              height="20">
+          </span>
+          Arrival
+        </h2>
+
+        <span>01</span>
+      </div>
+
+      <h3 class="h6 mt-3">Check-in from 15:00</h3>
+      <p class="text-body-secondary">Sat, 25 April</p>
+
+      <p class="mb-0">
+        Ring the brass bell by the blue door. If we're at
+        the market, the key is in the terracotta pot by
+        the olive tree.
+      </p>
+
+    </div>
+  </div>
+</section>
+ 
+  <!-- Wifi -->
+  <section class="col-12 col-lg-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <div class="d-flex justify-content-between">
+          <h2 class="h5 d-flex align-items-center gap-2 mb-0">
+            <span class="wifi-icon p-2 rounded">
+              <img
+              src="./assets/images/icon-wifi.svg"
+              alt=""
+              width="20"
+              height="20">
+            </span>
+            Wifi
+          </h2>
+          <span>02</span>
+        </div>
+
+        <h3 class="h6 mt-3">Le Soleil · Guest</h3>
+        <p class="text-body-secondary">Password below</p>
+
+        <div class="d-flex justify-content-between gap-2 mb-3">
+  <span class="small text-uppercase">Network</span>
+  <span>Le Soleil · Guest</span>
+</div>
+
+<div class="d-flex justify-content-between align-items-center gap-2">
+  <span class="small text-uppercase">Password</span>
+
+  <div class="d-flex align-items-center gap-2">
+    <span>soleil-2026</span>
+    <button type="button"
+            class="btn btn-outline-secondary btn-sm">
+      Copy
+    </button>
+  </div>
+  </div>
+  </div>
+  </div>
+  </section>
+  <!-- Breakfast -->
+   <section class="col-12 col-lg-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <div class="d-flex justify-content-between">
+          <h2 class="h5 d-flex align-items-center gap-2 mb-0">
+            <span class="breakfast-icon p-2 rounded">
+              <img
+              src="./assets/images/icon-breakfast.svg"
+              alt=""
+              width="20"
+              height="20">
+
+          </span>
+          Breakfast
+          </h2>
+          <span>03</span>
+        </div>
+
+        <h3 class="h6 mt-3">Served 8 - 10:30</h3>
+        <p class="text-body-secondary">On the terrace</p>
+
+        <p class="mb-0">
+          Fresh figs, Marseille honey, pain au levain,
+          and espresso. Gluten-free option? Leave a note
+          the night before.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+
+  <!-- Guest info row ends -->
+  </main>
+  <!-- Main content ends -->
+  </div>
+  </div>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">Rusul Al-turfi</a>.
+
+  </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
